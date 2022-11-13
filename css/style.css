@@ -1,0 +1,35 @@
+.modal-fullscreen {
+  max-width: none !important;
+  width: 100vw !important;
+  height: 100% !important;
+  margin: 0px !important;
+}
+
+.domain_color {
+  background-color: rgb(176, 174, 174) !important;
+  color: black !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.account_info {
+  border-radius: 4px;
+  border: 2px solid rgb(136, 157, 222);
+  background-color: transparent;
+  padding: 5px;
+}
+
+.main_header {
+  display: flex;
+  vertical-align: middle;
+}
+
+.main_cont {
+  width: 900px;
+  height: 200px;
+}
+
+.joints-table {
+  max-width: 900px;
+  width: 900px;
+}

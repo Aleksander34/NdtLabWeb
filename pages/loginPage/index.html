@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+
+	<body class="login-page">
+		<div class="login-box">
+			<div class="login-logo">NDT Lab</div>
+			<div class="login_card card">
+				<div class="login-card-body card-body">
+					<h4 class="text-center">Вход</h4>
+					<form id="loginForm" method="post" action="#">
+						<div class="input-group mb-3">
+							<input type="text" name="userEmail" class="form-control" placeholder="Логин(почта)" required autofocus />
+							<span class="input-group-text domain_color">@velesstroy.com</span>
+						</div>
+
+						<div class="mb-3">
+							<input type="password" placeholder="Пароль" required name="userPassword" class="form-control login_card_password" />
+						</div>
+
+						<div class="row">
+							<div class="col-8">
+								<div class="icheck-primary mt-1">
+									<input type="checkbox" id="rememberMe" name="rememberMe" checked />
+									<label for="rememberMe">Запомнить меня</label>
+								</div>
+							</div>
+							<div class="col-4">
+								<button id="loginButton" class="btn btn-primary btn-block" onclick="">Вход</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

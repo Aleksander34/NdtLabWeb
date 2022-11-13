@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>NdtLab - Таблица стыков</title>
+  </head>
+  <body class="sidebar-mini">
+    <div class="wrapper">
+      <!--вертикальное меню-->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <div class="container"></div>
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link">
+          <img src="/img/free-icon-office-7103932.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
+          <span class="brand-text font-weight-light">NdtLab</span>
+        </a>
+        <!-- Вертикальное меню -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-4">
+            <!-- Пункты меню -->
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Отчетность
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <!-- Подменю Отчетности -->
+                <ul class="nav nav-treeview" id="someIdNameOrSo">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Графики</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Таблицы</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Таблица стыков -->
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Таблица стыков</p>
+                </a>
+              </li>
+              <!--  -->
+
+              <!-- Задания -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Задания
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <!-- подменю -->
+                <ul class="nav nav-treeview" id="someIdNameOnother">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Меню заданий</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Получить задание</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Персонал -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Персонал
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <!-- подменю -->
+                <ul class="nav nav-treeview" id="someIdNameOnother">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>1 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>2 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>3 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>4 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>5 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>6 вкладка</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--  -->
+
+              <!-- Оборудование и инвентарь -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Оборудование и инвентарь
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <!-- подменю -->
+                <ul class="nav nav-treeview" id="someIdNameOnother">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>1 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>2 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>3 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>4 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>5 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>6 вкладка</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--  -->
+
+              <!-- Архив -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Архив
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <!-- подменю -->
+                <ul class="nav nav-treeview" id="someIdNameOnother">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>1 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>2 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>3 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>4 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>5 вкладка</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>6 вкладка</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--  -->
+
+              <!-- пункт меню без всплывающего меню -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Simple Link
+                    <span class="right badge badge-danger">New</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /Вертикальное меню -->
+      </aside>
+
+      <!-- горизонтальное верхнее меню -->
+      <nav class="main-header navbar navbar-expand-lg navbar-white navbar-light">
+        <!-- первый контейнер горизонтального меню -->
+        <ul class="navbar-nav align-items-center">
+          <!-- пусть открытой страницы -->
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+          </li>
+          <li class="nav-item">
+            <!-- Путь -->
+            <ol class="breadcrumb m-0">
+              <li class="breadcrumb-item active" aria-current="page">Таблица стыков</li>
+            </ol>
+          </li>
+          <!--полный экран -->
+          <li class="nav-item">
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- второй контейнер горизонтального меню -->
+        <ul class="navbar-nav ml-auto">
+          <!--Уведомления -->
+          <li c1lass="nav-item dropdown notification">
+            <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px">
+              <span class="dropdown-item dropdown-header">15 Notifications</span>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                <span class="float-right text-muted text-sm">3 mins</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-users mr-2"></i> 8 friend requests
+                <span class="float-right text-muted text-sm">12 hours</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-file mr-2"></i> 3 new reports
+                <span class="float-right text-muted text-sm">2 days</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+            </div>
+          </li>
+          <!-- информация о пользователе -->
+          <li class="nav-item">
+            <div class="ml-auto account_info mr-3">
+              <div class="account_role">Иванов И.И Роль</div>
+            </div>
+          </li>
+          <!-- кнопка выход -->
+          <li class="nav-item"><button class="btn btn-primary mr-3">Выход</button></li>
+        </ul>
+      </nav>
+
+      <!--содержимое страницы -->
+      <div class="content-wrapper">
+        <div class="container-fluid px-3">
+          <div class="row">
+            <div class="col">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus"></i> Создать заявку</button>
+            </div>
+          </div>
+          <div class="row mb-3 mt-3">
+            <div class="col-3">
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-3">
+              <div>
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <!-- Таблица стыков -->
+          <table id="example" class="table table-striped joints-table tableFiltred">
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Номер заявки</th>
+                <th>Номер стыка</th>
+                <th>Зона(тт)</th>
+                <th>Линия(тт)</th>
+                <th>Спул(тт)</th>
+                <th>Номер узла(мк)</th>
+                <th>Номер сектора(мк)</th>
+                <th>Тип части резервуара(рв)</th>
+                <th>Километр(ЛЧ)</th>
+                <th>Тип соединения</th>
+                <th>Способ сварки</th>
+                <th>Клеймо сварщика</th>
+                <th>Дата Сварки</th>
+                <th>Дата Заявки</th>
+                <th>Элемент 1</th>
+                <th>Элемент 2</th>
+                <th>Диаметр 1</th>
+                <th>Диаметр 2</th>
+                <th>Толщина 1</th>
+                <th>Толщина 2</th>
+                <th>Марка стали 1</th>
+                <th>Марка стали 2</th>
+                <th>Категория ГОСТ</th>
+                <th>Иная категория</th>
+                <th>Методы контроля</th>
+                <th>Метод испытания РК</th>
+                <th>Дата контроля РК</th>
+                <th>Дата заключения РК</th>
+                <th>Номер заключения РК</th>
+                <th>Результат контроля РК</th>
+                <th>Описание дефектов РК</th>
+                <th>Метод испытания УЗК</th>
+                <th>Дата контроля УЗК</th>
+                <th>Дата заключения УЗК</th>
+                <th>Номер заключения УЗК</th>
+                <th>Результат контроля УЗК</th>
+                <th>Описание дефектов УЗК</th>
+                <th>Метод испытания ПВК</th>
+                <th>Дата контроля ПВК</th>
+                <th>Дата заключения ПВК</th>
+                <th>Номер заключения ПВК</th>
+                <th>Результат контроля ПВК</th>
+                <th>Описание дефектов ПВК</th>
+                <th>Метод испытания МК</th>
+                <th>Дата контроля МК</th>
+                <th>Дата заключения МК</th>
+                <th>Номер заключения МК</th>
+                <th>Результат контроля МК</th>
+                <th>Описание дефектов МК</th>
+                <th>Метод испытания ПВТ</th>
+                <th>Дата контроля ПВТ</th>
+                <th>Дата заключения ПВТ</th>
+                <th>Номер заключения ПВТ</th>
+                <th>Результат контроля ПВТ</th>
+                <th>Описание дефектов ПВТ</th>
+                <th>Метод испытания ВИК</th>
+                <th>Дата контроля ВИК</th>
+                <th>Дата заключения ВИК</th>
+                <th>Номер заключения ВИК</th>
+                <th>Результат контроля ВИК</th>
+                <th>Описание дефектов ВИК</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Volgograd</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+              </tr>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Moscow</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+              </tr>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- костомный фильтр строк таблицы через коонки -->
+          <div
+            class="tableColumnFilter k-animation-container"
+            role="region"
+            style="width: 232px; height: 418px; overflow: visible; top: 700px; z-index: 10002; left: 508px; box-sizing: content-box; display: block; position: absolute"
+            aria-hidden="false"
+          >
+            <span class="k-searchbox k-textbox k-input k-input-md k-rounded-md k-input-solid"
+              ><span class="k-input-icon k-icon k-i-search"></span><input class="tableColumnFilter__search k-input-inner" type="text" placeholder="Search" /><span class="k-input-suffix"
+                ><span class="k-clear-value"><span class="k-icon k-i-x"></span></span></span
+            ></span>
+            <ul class="tableColumnFilter__items k-reset k-multicheck-wrap">
+              <li class="k-item" style="display: none">
+                <label class="k-label k-checkbox-label"><input type="checkbox" class="k-checkbox k-checkbox-md k-rounded-md" value="Perth Pasties" /><span>Perth Pasties</span></label>
+              </li>
+            </ul>
+            <div class="k-filter-selected-items">2 items selected</div>
+            <div class="k-action-buttons">
+              <button type="button" class="tableColumnFilter__filter-btn k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"><span class="k-button-text">Filter</span></button
+              ><button type="button" class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"><span class="k-button-text">Clear</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- подвал страницы -->
+      <footer class="main-footer">
+        <strong> Copyright &copy 2022 NdtLab; </strong>
+      </footer>
+    </div>
+
+    <!-- модальное окно -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Создание заявки</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Тип объекта контроля</label>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" id="productionRequest" class="btn btn-primary active">Производство</button>
+                <button type="button" id="qualificationRequest" class="btn btn-primary">Квалификация</button>
+              </div>
+            </div>
+            <div id="productionRequestType" class="mb-3">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary requestType">Трубопровод</button>
+                <button type="button" class="btn btn-primary requestType">Резервуар</button>
+                <button type="button" class="btn btn-primary requestType">Металлоконструкция</button>
+              </div>
+            </div>
+            <div id="qualificationRequestType" class="mb-3 d-none">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary requestType">ДС</button>
+                <button type="button" class="btn btn-primary requestType">ТР</button>
+                <button type="button" class="btn btn-primary requestType">PQR</button>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="requestFile" class="form-label">Файл заявки</label>
+              <input id="requestFile" class="form-control" type="file" accept=".xlsb, .xls, .xlsx" />
+            </div>
+
+            <div id="requestPreviewInfo" class="d-none">
+              <div class="mb-3 row">
+                <div class="col"><label for="requestFile" class="form-label">Заявка НК №:</label> 45698ППП</div>
+                <div class="col"><label for="requestFile" class="form-label">Дата:</label> 02.12.2022</div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстртаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстаж</li>
+                    <li class="list-group-item"><strong>Строительная организация:</strong> Велесстрой монтаж kjdfghdflijugg</li>
+                  </ul>
+                  <ul class="list-group mt-5">
+                    <li class="list-group-item"><strong>Чертеж:</strong> Велесстрой монтаж</li>
+                    <li class="list-group-item"><strong>Температура:</strong> Велесстрой монтаж</li>
+                  </ul>
+                </div>
+              </div>
+
+              <table id="requestPreviewTable" class="table table-striped joints-table">
+                <thead>
+                  <tr>
+                    <th>Номер стыка</th>
+                    <th>Тип соединения</th>
+                    <th>Способ сварки</th>
+                    <th>Клеймо сварщика</th>
+                    <th>Дата Сварки</th>
+                    <th>Элемент 1</th>
+                    <th>Элемент 2</th>
+                    <th>Толщина 1</th>
+                    <th>Толщина 2</th>
+                    <th>Марка стали 1</th>
+                    <th>Марка стали 2</th>
+                    <th>Протяженность шва</th>
+                    <th>Методы контроля</th>
+                    <th>Примечание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011-04-25</td>
+                    <td>$320,800</td>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011-04-25</td>
+                    <td>$320,800</td>
+                    <td>Tiger Nixon</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="button" id="saveRequest" class="btn btn-primary">Сохранить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- скрипты -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="/js/libs/toastr.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/jointsPage/index.js"></script>
+  </body>
+</html>
