@@ -627,6 +627,7 @@
           <!-- костомный фильтр строк таблицы через коонки -->
           <div
             class="tableColumnFilter k-animation-container"
+            data-num="3"
             role="region"
             style="width: 232px; height: 418px; overflow: visible; top: 700px; z-index: 10002; left: 508px; box-sizing: content-box; display: block; position: absolute"
             aria-hidden="false"
@@ -643,7 +644,7 @@
             <div class="k-filter-selected-items">2 items selected</div>
             <div class="k-action-buttons">
               <button type="button" class="tableColumnFilter__filter-btn k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"><span class="k-button-text">Filter</span></button
-              ><button type="button" class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"><span class="k-button-text">Clear</span></button>
+              ><button type="button" class="tableColumnFilter__clear-btn k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"><span class="k-button-text">Clear</span></button>
             </div>
           </div>
         </div>
@@ -780,6 +781,7 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="/js/libs/toastr.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/js/jointsPage/index.js"></script>
+    <script src="/js/libs/tableColumnFilter.js" type="module"></script>
+    <script src="/js/jointsPage/index.js" type="module"></script>
   </body>
 </html>
