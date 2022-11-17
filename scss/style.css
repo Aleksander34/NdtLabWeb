@@ -1,3 +1,10 @@
+.tableColumnFilter-wrapper {
+  z-index: 1000000000000000100000;
+}
+.tableColumnFilter-wrapper .tableColumnFilter {
+  z-index: 10000000000000002000;
+}
+
 .modal-fullscreen {
   max-width: none !important;
   width: 100vw !important;

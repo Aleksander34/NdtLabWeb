@@ -69,49 +69,28 @@ export default function initColumnFilter(selectorTable, selectorCol) {
 		});
 	});
 	_$filter.siblings('.filterShow').click(function () {
-		_$filter.removeClass('d-none');
-	});
-
-	return filter;
-}
-
-jQuery(function ($) {
-	$(document).mouseup(function (e) {
-		var div = $('.tableColumnFilter-wrapper');
-		if (!div.is(e.target) && div.has(e.target).length === 0) {
-			div.find('.tableColumnFilter').addClass('d-none');
-		}
+		// _$filter.toggleClass('d-none');
 	});
 	$('.dataTables_scrollBody').find('.tableColumnFilter-wrapper').addClass('d-none');
-});
+	return filter;
+}
 
 //создание метода фильтра создает фильтр на странице
 function initFilter(_$col) {
 	_$col.append(`
-	
-	<div class="tableColumnFilter-wrapper">
-	<button class="btn btn-primary filterShow">*
-	</button> 
-	<div
-	class="tableColumnFilter k-animation-container d-none"
-
-	>
-	
-	<span class="k-searchbox k-textbox k-input k-input-md k-rounded-md k-input-solid"
-		><span class="k-input-icon k-icon k-i-search"></span><input class="tableColumnFilter__search k-input-inner" type="text" placeholder="Search" /><span class="k-input-suffix"
-			><span class="k-clear-value"><span class="k-icon k-i-x"></span></span></span
-	></span>
-	<ul class="tableColumnFilter__items k-reset k-multicheck-wrap">
-		<li class="k-item" style="display: none">
-			<label class="k-label k-checkbox-label"><input type="checkbox" class="k-checkbox k-checkbox-md k-rounded-md" value="Perth Pasties" /><span>Perth Pasties</span></label>
-		</li>
-	</ul>
-	<div class="k-filter-selected-items">2 items selected</div>
-	<div class="k-action-buttons">
-		<button type="button" class="tableColumnFilter__filter-btn k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary"><span class="k-button-text">Filter</span></button
-		><button type="button" class="tableColumnFilter__clear-btn k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"><span class="k-button-text">Clear</span></button>
+	<div class="tableColumnFilter-wrapper dropdown">
+	<button class="btn btn-primary filterShow" data-bs-toggle="dropdown"><i class="fa-solid fa-filter"></i></button>
+	<div class="tableColumnFilter dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<span class="dropdown-header">15 выбрано</span>
+		<div class="dropdown-divider"></div>
+		<input class="tableColumnFilter__search dropdown-item" type="text" placeholder="Search" />
+		<ul class="tableColumnFilter__items dropdown-item"></ul>
+		<div class="dropdown-divider"></div>
+		<div class="dropdown-item dropdown-footer">
+			<button type="button" class="tableColumnFilter__filter-btn">поиск фильтр</button>
+			<button type="button" class="tableColumnFilter__clear-btn">очистить фильтр</button>
+		</div>
 	</div>
-	</div>
-	</div>
+</div>
 	`);
 }
