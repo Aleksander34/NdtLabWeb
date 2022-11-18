@@ -17,6 +17,7 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/libs/airDatePicker/index.css" />
 
 		<title>NdtLab - Таблица стыков</title>
 	</head>
@@ -336,32 +337,74 @@
 							<button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus"></i> Создать заявку</button>
 						</div>
 					</div>
-					<div class="row mb-3 mt-3">
-						<div class="col-3">
-							<div>
-								<label for="exampleFormControlInput1" class="form-label">Email address</label>
-								<select class="form-select" aria-label="Default select example">
-									<option selected>Open this select menu</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
-								</select>
+					<!-- Фильтры таблицы -->
+					<div class="joints__filters">
+						<div class="row mb-3 mt-3">
+							<div class="col-3">
+								<label for="exampleFormControlInput1" class="form-label">Тип объекта контроля</label>
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<button type="button" id="productionRequest" class="btn btn-primary active">Производство</button>
+									<button type="button" id="qualificationRequest" class="btn btn-primary">Квалификация</button>
+								</div>
+							</div>
+							<div class="col-3">
+								<label for="exampleFormControlInput1" class="form-label">тип чегото там</label>
+								<div>
+									<div id="productionRequestType" class="btn-group" role="group" aria-label="Basic example">
+										<button type="button" class="btn btn-primary requestType">Трубопровод</button>
+										<button type="button" class="btn btn-primary requestType">Резервуар</button>
+										<button type="button" class="btn btn-primary requestType">Металлоконструкция</button>
+									</div>
+									<div id="qualificationRequestType" class="btn-group d-none" role="group" aria-label="Basic example">
+										<button type="button" class="btn btn-primary requestType">ДС</button>
+										<button type="button" class="btn btn-primary requestType">ТР</button>
+										<button type="button" class="btn btn-primary requestType">PQR</button>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col-3">
-							<div>
-								<label for="exampleFormControlInput1" class="form-label">Email address</label>
-								<select class="form-select" aria-label="Default select example">
-									<option selected>Open this select menu</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
-								</select>
+						<div class="row mb-3 mt-3">
+							<div class="col-3">
+								<div>
+									<label for="exampleFormControlInput1" class="form-label">Email address</label>
+									<select class="form-select" aria-label="Default select example">
+										<option selected>Open this select menu</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-3">
+								<div>
+									<label for="exampleFormControlInput1" class="form-label">Email address</label>
+									<select class="form-select" aria-label="Default select example">
+										<option selected>Open this select menu</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-3">
+								<label class="form-label" for="">Выбор даты</label>
+								<input class="form-control" type="text" name="" id="jointsDate" />
 							</div>
 						</div>
-						<div class="col-3"></div>
 					</div>
+
 					<!-- Таблица стыков -->
+					<div class="row">
+						<div class="col-6"></div>
+						<div class="col-6">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button class="btn btn-secondary btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+								</div>
+								<input class="form-control" type="text" />
+							</div>
+						</div>
+					</div>
 					<table id="example" class="table table-striped joints-table tableFiltred">
 						<thead>
 							<tr>
@@ -759,6 +802,7 @@
 		<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 		<script src="/js/libs/toastr.js"></script>
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="/libs/airDatePicker/index.js"></script>
 		<script src="/js/libs/tableColumnFilter.js" type="module"></script>
 		<script src="/js/jointsPage/index.js" type="module"></script>
 	</body>
