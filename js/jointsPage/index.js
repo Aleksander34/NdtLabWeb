@@ -7,6 +7,10 @@ $(function () {
 		scrollX: true,
 	});
 
+	// paging: false, // свойствами дата таблицы можно убрать лишнее
+	// ordering: false,
+	// info: false,
+
 	_$modal
 		.on('shown.bs.modal', () => {}) //действия при открытии
 		.on('hidden.bs.modal', () => {
