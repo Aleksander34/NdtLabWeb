@@ -3,6 +3,37 @@ $(function () {
 	var _$modal = $('#exampleModal'),
 		_$table = $('#example');
 
+		$('#requestPreviewTable').DataTable({
+			scrollX: true,
+			ordering: false,
+			searching: false,
+			dom: [
+				"<'row'<'col-md-12'f>>",
+				"<'row'<'col-md-12't>>",
+				"<'row mt-2'",
+				"<'col-lg-1 col-xs-12'<'float-left text-center data-tables-refresh'B>>",
+				"<'col-lg-3 col-xs-12'<'float-left text-center'i>>",
+				"<'col-lg-3 col-xs-12'<'text-center'l>>",
+				"<'col-lg-5 col-xs-12'<'float-right'p>>",
+				'>',
+			].join(''),
+			info: false,
+			paging: false
+		});
+
+let language ={
+	emptyTable: 'нет данных',
+	info: 'показано c: _START_ по: _END_ из: _TOTAL_',
+	infoEmpty: 'нет данных',
+	lengthMenu: 'элементов _MENU_ на странице',
+	paginate: {
+		first: 'первая страница',
+		last: 'последняя страница',
+		next: 'следующая страница',
+		previous: 'предыдущая страница'
+	}
+}
+
 	_$table.DataTable({
 		scrollX: true,
 		ordering: false,
@@ -18,6 +49,7 @@ $(function () {
 			'>',
 		].join(''),
 		buttons: [{ name: 'refresh', text: '<i class="fa-solid fa-rotate"></i>', action: () => console.log('refresh') }],
+		language: language
 	});
 
 	// paging: false, // свойствами дата таблицы можно убрать лишнее
@@ -67,9 +99,7 @@ $(function () {
 		}
 	});
 
-	$('#requestPreviewTable').DataTable({
-		scrollX: true,
-	});
+	
 
 	$('#saveRequest').click(function () {
 		$('#exampleModal').modal('hide');

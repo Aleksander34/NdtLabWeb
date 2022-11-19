@@ -1,42 +1,51 @@
 .tableColumnFilter-wrapper {
-	z-index: 1000000000000000100000;
+  z-index: 1000;
 }
 .tableColumnFilter-wrapper .tableColumnFilter {
-	z-index: 10000000000000002000;
+  z-index: 1000;
 }
 
 .modal-fullscreen {
-	max-width: none !important;
-	width: 100vw !important;
-	height: 100% !important;
-	margin: 0px !important;
+  max-width: none !important;
+  width: 100vw !important;
+  height: 100% !important;
+  margin: 0px !important;
 }
 
 .domain_color {
-	background-color: rgb(176, 174, 174) !important;
-	color: black !important;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+  background-color: rgb(176, 174, 174) !important;
+  color: black !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .account_info {
-	border-radius: 4px;
-	border: 2px solid rgb(136, 157, 222);
-	background-color: transparent;
-	padding: 5px;
+  border-radius: 4px;
+  border: 2px solid rgb(136, 157, 222);
+  background-color: transparent;
+  padding: 5px;
 }
 
 .main_header {
-	display: flex;
-	vertical-align: middle;
+  display: flex;
+  vertical-align: middle;
 }
 
 .main_cont {
-	width: 900px;
-	height: 200px;
+  width: 900px;
+  height: 200px;
 }
 
 .joints-table {
-	max-width: 900px;
-	width: 900px;
-} /*# sourceMappingURL=style.css.map */
+  max-width: 900px;
+  width: 900px;
+}
+
+.joinModal .modal-header {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.jointModel__info .list-group-item {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
