@@ -34,10 +34,26 @@ let language ={
 	}
 }
 
+let data=[
+	{
+			"name1":       "Tiger Nixon",
+			"name2":   "System Architect",
+			"name3":     "$3,120",
+			"name4": "2011/04/25",
+			"name5":     "Edinburgh",
+			"name6":       "5421",
+			"name7":       "Tiger Nixon",
+			"name8":   "System Architect",
+			"name9":     "$3,120",
+			"name10": "2011/04/25",
+	},
+]
+
 	_$table.DataTable({
 		scrollX: true,
 		ordering: false,
 		searching: false,
+		data: data,
 		dom: [
 			"<'row'<'col-md-12'f>>",
 			"<'row'<'col-md-12't>>",
@@ -49,7 +65,50 @@ let language ={
 			'>',
 		].join(''),
 		buttons: [{ name: 'refresh', text: '<i class="fa-solid fa-rotate"></i>', action: () => console.log('refresh') }],
-		language: language
+		language: language,
+		drawCallback:()=>{$('[data-bs-toggle="tooltip"]').tooltip()},
+		columns: [
+			{
+				data: null,
+				render:(data)=>{
+					return [
+						`<button type="button" class="btn text-danger btnIcon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Удалить"><i class="fa-solid fa-xmark"></i></button>`,
+						`<button type="button" class="btn text-secondary btnIcon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Редактировать"><i class="fa-solid fa-pen"></i></button>`
+					].join('')
+				}
+			},
+			{
+				data: "name1"
+			},
+			{
+				data: "name2"
+			},
+			{
+				data: "name3"
+			},
+			{
+				data: "name4"
+			},
+			{
+				data: "name5"
+			},
+			{
+				data: "name6"
+			},
+			{
+				data: "name7"
+			},
+			{
+				data: "name8"
+			},
+			{
+				data: "name9"
+			},
+			{
+				data: "name10"
+			}
+		]
+
 	});
 
 	// paging: false, // свойствами дата таблицы можно убрать лишнее

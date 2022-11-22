@@ -49,3 +49,13 @@
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
+.btnIcon {
+  padding: 2px;
+}
+.btnIcon:hover {
+  border: none;
+}
+.btnIcon + .btnIcon {
+  margin-left: 5px;
+}

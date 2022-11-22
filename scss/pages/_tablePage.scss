@@ -27,3 +27,9 @@
     padding-bottom: 0px;
   }
 }
+
+.btnIcon{
+  padding: 2px;
+  &:hover{border:none};
+  &+&{margin-left: 5px;}
+}
