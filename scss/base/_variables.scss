@@ -1,0 +1,8 @@
+$primary: rgb(152, 154, 177);
+$primary-active: rgb(194, 83, 185);
+.btn-primary {
+	background-color: $primary !important;
+	&.active {
+		background-color: $primary-active !important;
+	}
+}

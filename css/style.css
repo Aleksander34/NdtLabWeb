@@ -5,6 +5,13 @@
   z-index: 1000;
 }
 
+.btn-primary {
+  background-color: rgb(152, 154, 177) !important;
+}
+.btn-primary.active {
+  background-color: rgb(194, 83, 185) !important;
+}
+
 .modal-fullscreen {
   max-width: none !important;
   width: 100vw !important;
@@ -36,11 +43,6 @@
   height: 200px;
 }
 
-.joints-table {
-  max-width: 900px;
-  width: 900px;
-}
-
 .joinModal .modal-header {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -58,4 +60,4 @@
 }
 .btnIcon + .btnIcon {
   margin-left: 5px;
-}
+}/*# sourceMappingURL=style.css.map */
