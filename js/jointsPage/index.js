@@ -52,16 +52,74 @@ $(function () {
 
 	let data = [
 		{
-			name1: 'Tiger Nixon',
-			name2: 'System Architect',
-			name3: '$3,120',
-			name4: '2011/04/25',
-			name5: 'Edinburgh',
-			name6: '5421',
-			name7: 'Tiger Nixon',
-			name8: 'System Architect',
-			name9: '$3,120',
-			name10: '2011/04/25',
+			sN: '',
+			request_number: 'xxxxx',
+			joint_number: '$3,120',
+			piping_zone: '2011/04/25',
+			piping_line: 'Edinburgh',
+			piping_spool: '5421',
+			steelStructure_part: 'Tiger Nixon',
+			steelStructure_sector: 'Tiger Nixon',
+			tank_part: 'dfjhdklldkgfj',
+			pipeLine_distance: '$3,120',
+			joint_connectionType: '2011/04/25',
+			joint_weldingType: '2011/04/25',
+			welder_stamp: '2011/04/25',
+			joint_weldingDate: '2011/04/25',
+			request_date: '2011/04/25',
+			joint_elementOne: '2011/04/25',
+			joint_elementTwo: '2011/04/25',
+			joint_diameterOne: '2011/04/25',
+			joint_diameterTwo: '2011/04/25',
+			joint_thicknessOne: '2011/04/25',
+			joint_thicknessTwo: '2011/04/25',
+			joint_gradeOne: '2011/04/25',
+			joint_gradeTwo: '2011/04/25',
+			request_categoryGost: '2011/04/25',
+			request_otherCategory: '2011/04/25',
+			requiredInspection_name: '2011/04/25',
+			rt_inspection_name: '2011/04/25',
+			rt_inspection_date: '2011/04/25',
+			rt_inspection_reportDate: '2011/04/25',
+			rt_inspection_reportNumber: '2011/04/25',
+			rt_inspection_result: '2011/04/25',
+			rt_inspection_description: '2011/04/25',
+			paut_Inspection_name: '2011/04/25',
+			paut_inspection_date: '2011/04/25',
+			paut_inspection_reportDate: '2011/04/25',
+			paut_inspection_reportNumber: '2011/04/25',
+			paut_inspection_result: '2011/04/25',
+			paut_inspection_description: '2011/04/25',
+			ut_inspection_name: '2011/04/25',
+			ut_inspection_date: '2011/04/25',
+			ut_inspection_reportDate: '2011/04/25',
+			ut_inspection_reportNumber: '2011/04/25',
+			ut_inspection_result: '2011/04/25',
+			ut_inspection_description: '2011/04/25',
+			vt_inspection_name: '2011/04/25',
+			vtinspection_date: '2011/04/25',
+			vtinspection_reportDate: '2011/04/25',
+			vtinspection_reportNumber: '2011/04/25',
+			vtinspection_result: '2011/04/25',
+			vtinspection_description: '2011/04/25',
+			pt_inspection_name: '2011/04/25',
+			pt_inspection_date: '2011/04/25',
+			pt_inspection_reportDate: '2011/04/25',
+			pt_inspection_reportNumber: '2011/04/25',
+			pt_inspection_result: '2011/04/25',
+			pt_inspection_description: '2011/04/25',
+			mt_inspection_name: '2011/04/25',
+			mt_inspection_date: '2011/04/25',
+			mt_inspection_reportDate: '2011/04/25',
+			mt_inspection_reportNumber: '2011/04/25',
+			mt_inspection_result: '2011/04/25',
+			mt_inspection_description: '2011/04/25',
+			lt_inspection_name: '2011/04/25',
+			lt_inspection_date: '2011/04/25',
+			lt_inspection_reportDate: '2011/04/25',
+			lt_inspection_reportNumber: '2011/04/25',
+			lt_inspection_result: '2011/04/25',
+			lt_inspection_description: '2011/04/25',
 		},
 	];
 
@@ -88,49 +146,223 @@ $(function () {
 			{
 				data: null,
 				render: (data) => {
-					return [
+					let btns = [
 						`<button type="button" class="btn text-danger btnIcon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Удалить"><i class="fa-solid fa-xmark"></i></button>`,
 						`<button type="button" class="btn text-secondary btnIcon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Редактировать"><i class="fa-solid fa-pen"></i></button>`,
 						`<button type="button" class="showRepairCountModal btn text-secondary btnIcon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Количество: 10"><i class="fa-regular fa-eye"></i></button>`,
 					].join('');
+					return `<div class="d-flex align-items-center">
+					${btns}
+					</div>`;
 				},
 			},
+
 			{
-				data: 'name1',
+				data: 'sN',
 			},
 			{
-				data: 'name2',
+				data: 'request_number',
 			},
 			{
-				data: 'name3',
+				data: 'joint_number',
 			},
 			{
-				data: 'name4',
+				data: 'piping_zone',
 			},
 			{
-				data: 'name5',
+				data: 'piping_line',
 			},
 			{
-				data: 'name6',
+				data: 'piping_spool',
 			},
 			{
-				data: 'name7',
+				data: 'steelStructure_part',
 			},
 			{
-				data: 'name8',
+				data: 'steelStructure_sector',
 			},
 			{
-				data: 'name9',
+				data: 'tank_part',
 			},
 			{
-				data: 'name10',
+				data: 'pipeLine_distance',
+			},
+			{
+				data: 'joint_connectionType',
+			},
+			{
+				data: 'joint_weldingType',
+			},
+			{
+				data: 'welder_stamp',
+			},
+			{
+				data: 'joint_weldingDate',
+			},
+			{
+				data: 'request_date',
+			},
+			{
+				data: 'joint_elementOne',
+			},
+			{
+				data: 'joint_elementTwo',
+			},
+			{
+				data: 'joint_diameterOne',
+			},
+			{
+				data: 'joint_diameterTwo',
+			},
+			{
+				data: 'joint_thicknessOne',
+			},
+			{
+				data: 'joint_thicknessTwo',
+			},
+			{
+				data: 'joint_gradeOne',
+			},
+			{
+				data: 'joint_gradeTwo',
+			},
+			{
+				data: 'request_categoryGost',
+			},
+			{
+				data: 'request_otherCategory',
+			},
+			{
+				data: 'requiredInspection_name',
+			},
+			{
+				data: 'rt_inspection_name',
+			},
+			{
+				data: 'rt_inspection_date',
+			},
+			{
+				data: 'rt_inspection_reportDate',
+			},
+			{
+				data: 'rt_inspection_reportNumber',
+			},
+			{
+				data: 'rt_inspection_result',
+			},
+			{
+				data: 'rt_inspection_description',
+			},
+			{
+				data: 'paut_Inspection_name',
+			},
+			{
+				data: 'paut_inspection_date',
+			},
+			{
+				data: 'paut_inspection_reportDate',
+			},
+			{
+				data: 'paut_inspection_reportNumber',
+			},
+			{
+				data: 'paut_inspection_result',
+			},
+			{
+				data: 'paut_inspection_description',
+			},
+			{
+				data: 'ut_inspection_name',
+			},
+			{
+				data: 'ut_inspection_date',
+			},
+			{
+				data: 'ut_inspection_reportDate',
+			},
+			{
+				data: 'ut_inspection_reportNumber',
+			},
+			{
+				data: 'ut_inspection_result',
+			},
+			{
+				data: 'ut_inspection_description',
+			},
+			{
+				data: 'vt_inspection_name',
+			},
+			{
+				data: 'vtinspection_date',
+			},
+			{
+				data: 'vtinspection_reportDate',
+			},
+			{
+				data: 'vtinspection_reportNumber',
+			},
+			{
+				data: 'vtinspection_result',
+			},
+			{
+				data: 'vtinspection_description',
+			},
+			{
+				data: 'pt_inspection_name',
+			},
+			{
+				data: 'pt_inspection_date',
+			},
+			{
+				data: 'pt_inspection_reportDate',
+			},
+			{
+				data: 'pt_inspection_reportNumber',
+			},
+			{
+				data: 'pt_inspection_result',
+			},
+			{
+				data: 'pt_inspection_description',
+			},
+			{
+				data: 'mt_inspection_name',
+			},
+			{
+				data: 'mt_inspection_date',
+			},
+			{
+				data: 'mt_inspection_reportDate',
+			},
+			{
+				data: 'mt_inspection_reportNumber',
+			},
+			{
+				data: 'mt_inspection_result',
+			},
+			{
+				data: 'mt_inspection_description',
+			},
+			{
+				data: 'lt_inspection_name',
+			},
+			{
+				data: 'lt_inspection_date',
+			},
+			{
+				data: 'lt_inspection_reportDate',
+			},
+			{
+				data: 'lt_inspection_reportNumber',
+			},
+			{
+				data: 'lt_inspection_result',
+			},
+			{
+				data: 'lt_inspection_description',
 			},
 		],
 	});
-
-	// paging: false, // свойствами дата таблицы можно убрать лишнее
-	// ordering: false,
-	// info: false,
 
 	new AirDatepicker('#jointsDate', {
 		range: true,

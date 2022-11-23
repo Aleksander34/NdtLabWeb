@@ -19,6 +19,10 @@
   margin: 0px !important;
 }
 
+.main-sidebar {
+  background-color: white;
+}
+
 .domain_color {
   background-color: rgb(176, 174, 174) !important;
   color: black !important;
