@@ -344,26 +344,87 @@
 								<label for="exampleFormControlInput1" class="form-label">Тип объекта контроля</label>
 								<div>
 									<div class="btn-group" role="group" aria-label="Basic example">
-										<button type="button" id="productionRequest2" class="btn btn-primary active">Производство</button>
-										<button type="button" id="qualificationRequest2" class="btn btn-primary">Квалификация</button>
+										<button type="button" id="productionRequest2" class="btn-xsm btn btn-primary active">Производство</button>
+										<button type="button" id="qualificationRequest2" class="btn-xsm btn btn-primary">Квалификация</button>
 									</div>
 								</div>
 							</div>
-							<div class="col-6">
+							<div class="col-4">
 								<label for="exampleFormControlInput1" class="form-label">тип чегото там</label>
 								<div>
 									<div id="productionRequestType2" class="btn-group" role="group" aria-label="Basic example">
-										<button type="button" class="btn btn-primary requestType">Трубопровод</button>
-										<button type="button" class="btn btn-primary requestType">Резервуар</button>
-										<button type="button" class="btn btn-primary requestType">Металлоконструкция</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">Т/T</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">РВС</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">МК</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">ЛЧ</button>
 									</div>
 									<div id="qualificationRequestType2" class="btn-group d-none" role="group" aria-label="Basic example">
-										<button type="button" class="btn btn-primary requestType">ДС</button>
-										<button type="button" class="btn btn-primary requestType">ТР</button>
-										<button type="button" class="btn btn-primary requestType">PQR</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">ДС</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">ТР</button>
+										<button type="button" class="btn-xsm btn btn-primary requestType">PQR</button>
 									</div>
 								</div>
 							</div>
+							<div class="col-5">
+								<!-- Фильтр Статус контроля -->
+								<div class="filterStatusResult">
+									<div class="row text-center">
+										<div class="col">Методы</div>
+										<div class="col">Годен</div>
+										<div class="col">Ремонт/Вырез</div>
+										<div class="col">Н/Р</div>
+										<div class="col">Нет контроля</div>
+									</div>
+									<div class="filterStatusResult__items">
+										<div class="row text-center">
+											<div class="col">ВИК</div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+										</div>
+										<div class="row text-center">
+											<div class="col">МК/ПВК</div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+										</div>
+										<div class="row text-center">
+											<div class="col">РК</div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+										</div>
+										<div class="row text-center">
+											<div class="col">PAUT</div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+										</div>
+										<div class="row text-center">
+											<div class="col">УЗК</div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+										</div>
+										<div class="row text-center">
+											<div class="col">ПВТ</div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+											<div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
+										</div>
+									</div>
+									<button class="filterStatusResult__reset btn btn-secondary">Снять выделение</button>
+									<button class="filterStatusResult__checkAll btn btn-primary">Применить фильтр</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-3">
 								<label class="form-label" for="">Выбор даты</label>
 								<input class="form-control" type="text" name="" id="jointsDate" />
@@ -604,38 +665,318 @@
 						<table id="repairCountTable" class="table">
 							<thead>
 								<tr>
+									<th>№</th>
+									<th>Номер заявки</th>
 									<th>Номер стыка</th>
-									<th>Тип соединения</th>
 									<th>Способ сварки</th>
 									<th>Клеймо сварщика</th>
 									<th>Дата Сварки</th>
-									<th>Элемент 1</th>
-									<th>Элемент 2</th>
-									<th>Толщина 1</th>
-									<th>Толщина 2</th>
-									<th>Марка стали 1</th>
-									<th>Марка стали 2</th>
-									<th>Протяженность шва</th>
+									<th>Дата Заявки</th>
 									<th>Методы контроля</th>
-									<th>Примечание</th>
+									<th>Метод испытания РК</th>
+									<th>Дата контроля РК</th>
+									<th>Дата заключения РК</th>
+									<th>Номер заключения РК</th>
+									<th>Результат контроля РК</th>
+									<th>Описание дефектов РК</th>
+									<th>Метод испытания PAUT</th>
+									<th>Дата контроля PAUT</th>
+									<th>Дата заключения PAUT</th>
+									<th>Номер заключения PAUT</th>
+									<th>Результат контроля PAUT</th>
+									<th>Описание дефектов PAUT</th>
+									<th>Метод испытания УЗК</th>
+									<th>Дата контроля УЗК</th>
+									<th>Дата заключения УЗК</th>
+									<th>Номер заключения УЗК</th>
+									<th>Результат контроля УЗК</th>
+									<th>Описание дефектов УЗК</th>
+									<th>Метод испытания ПВК</th>
+									<th>Дата контроля ПВК</th>
+									<th>Дата заключения ПВК</th>
+									<th>Номер заключения ПВК</th>
+									<th>Результат контроля ПВК</th>
+									<th>Описание дефектов ПВК</th>
+									<th>Метод испытания МК</th>
+									<th>Дата контроля МК</th>
+									<th>Дата заключения МК</th>
+									<th>Номер заключения МК</th>
+									<th>Результат контроля МК</th>
+									<th>Описание дефектов МК</th>
+									<th>Метод испытания ВИК</th>
+									<th>Дата контроля ВИК</th>
+									<th>Дата заключения ВИК</th>
+									<th>Номер заключения ВИК</th>
+									<th>Результат контроля ВИК</th>
+									<th>Описание дефектов ВИК</th>
+									<th>Метод испытания ПВТ</th>
+									<th>Дата контроля ПВТ</th>
+									<th>Дата заключения ПВТ</th>
+									<th>Номер заключения ПВТ</th>
+									<th>Результат контроля ПВТ</th>
+									<th>Описание дефектов ПВТ</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td>Tiger Nixon</td>
-									<td>System Architect</td>
-									<td>Edinburgh</td>
-									<td>61</td>
+									<td>458569</td>
+									<td>Ст 598624</td>
+									<td>РАД/РД</td>
+									<td>615698</td>
 									<td>2011-04-25</td>
-									<td>$320,800</td>
-									<td>Tiger Nixon</td>
-									<td>System Architect</td>
-									<td>Edinburgh</td>
-									<td>61</td>
 									<td>2011-04-25</td>
-									<td>$320,800</td>
-									<td>Tiger Nixon</td>
+									<td>ВИК, РК, УЗК, ПВК</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>458569</td>
+									<td>Ст 598624</td>
+									<td>РАД/РД</td>
+									<td>615698</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>ВИК, РК, УЗК, ПВК</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>458569</td>
+									<td>Ст 598624</td>
+									<td>РАД/РД</td>
+									<td>615698</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>ВИК, РК, УЗК, ПВК</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>458569</td>
+									<td>Ст 598624</td>
+									<td>РАД/РД</td>
+									<td>615698</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>ВИК, РК, УЗК, ПВК</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>458569</td>
+									<td>Ст 598624</td>
+									<td>РАД/РД</td>
+									<td>615698</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>ВИК, РК, УЗК, ПВК</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
+									<td>РК</td>
+									<td>2011-04-25</td>
+									<td>2011-04-25</td>
+									<td>458965</td>
+									<td>годен</td>
+									<td>дефектов не обнаружено</td>
 								</tr>
 							</tbody>
 						</table>

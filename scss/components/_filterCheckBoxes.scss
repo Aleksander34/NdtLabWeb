@@ -1,0 +1,18 @@
+.filterCheckBoxes {
+	border: 1px solid black;
+	max-width: 560px;
+	background-color: grey;
+	color: white;
+	border-radius: 8px;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 80px;
+		padding: 5px 7px;
+		& + & {
+			border-left: 1px solid black;
+		}
+	}
+}

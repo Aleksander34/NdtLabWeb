@@ -1574,4 +1574,8 @@ $(function () {
 	$(document).on('click', '.showRepairCountModal', function () {
 		$('#repairCountModal').modal('show');
 	});
+
+	$('.filterStatusResult__reset').click(function () {
+		$(this).parent().find('[type="checkbox"]').prop('checked', false);
+	});
 });

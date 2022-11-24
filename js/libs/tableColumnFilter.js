@@ -79,7 +79,7 @@ export default function initColumnFilter(selectorTable, selectorCol) {
 function initFilter(_$col) {
 	_$col.append(`
 	<div class="tableColumnFilter-wrapper dropdown">
-	<button class="btn btn-primary filterShow" data-bs-toggle="dropdown"><i class="fa-solid fa-filter"></i></button>
+	<button type="button" class="btn text-secondary btnIcon filterShow" data-bs-toggle="dropdown" data-bs-title="Фильтр"><i class="fa-solid fa-filter"></i></button>
 	<div class="tableColumnFilter dropdown-menu dropdown-menu-lg dropdown-menu-right">
 		<span class="dropdown-header">15 выбрано</span>
 		<div class="dropdown-divider"></div>

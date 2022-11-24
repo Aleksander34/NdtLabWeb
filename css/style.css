@@ -23,6 +23,29 @@
   background-color: white;
 }
 
+.filterCheckBoxes {
+  border: 1px solid black;
+  max-width: 560px;
+  background-color: grey;
+  color: white;
+  border-radius: 8px;
+}
+.filterCheckBoxes__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80px;
+  padding: 5px 7px;
+}
+.filterCheckBoxes__item + .filterCheckBoxes__item {
+  border-left: 1px solid black;
+}
+
+.btn-xsm {
+  padding: 10px 5px !important;
+}
+
 .domain_color {
   background-color: rgb(176, 174, 174) !important;
   color: black !important;
