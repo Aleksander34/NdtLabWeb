@@ -334,100 +334,116 @@
 				<div class="container-fluid px-3">
 					<!-- Фильтры таблицы -->
 					<div class="joints__filters">
-						<div class="row mb-3 mt-3">
+						<div class="row mb-3">
+							<div class="col-9">
+								<div class="row mb-3">
+									<div class="col-3">
+										<label for="exampleFormControlInput1" class="form-label">Тип объекта контроля</label>
+										<div>
+											<div class="btn-group" role="group" aria-label="Basic example">
+												<button type="button" id="productionRequest2" class="btn btn-primary active">Производство</button>
+												<button type="button" id="qualificationRequest2" class="btn btn-primary">Квалификация</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="exampleFormControlInput1" class="form-label">тип чегото там</label>
+										<div>
+											<div id="productionRequestType2" class="btn-group" role="group" aria-label="Basic example">
+												<button type="button" class="btn btn-primary requestType">Трубопровод</button>
+												<button type="button" class="btn btn-primary requestType">Резервуар</button>
+												<button type="button" class="btn btn-primary requestType">Металлоконструкция</button>
+											</div>
+											<div id="qualificationRequestType2" class="btn-group d-none" role="group" aria-label="Basic example">
+												<button type="button" class="btn btn-primary requestType">ДС</button>
+												<button type="button" class="btn btn-primary requestType">ТР</button>
+												<button type="button" class="btn btn-primary requestType">PQR</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6">
+										<div class="filterCheckBoxes d-flex align-items-center">
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+											<div class="filterCheckBoxes__item">
+												<div>ПВК <span>(10)</span></div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-3">
+										<label class="form-label" for="">Выбор даты</label>
+										<input class="form-control" type="text" name="" id="jointsDate" />
+									</div>
+								</div>
+							</div>
 							<div class="col-3">
-								<label for="exampleFormControlInput1" class="form-label">Тип объекта контроля</label>
-								<div>
-									<div class="btn-group" role="group" aria-label="Basic example">
-										<button type="button" id="productionRequest2" class="btn btn-primary active">Производство</button>
-										<button type="button" id="qualificationRequest2" class="btn btn-primary">Квалификация</button>
+								<div class="filterEmployees">
+									<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+										<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" />
+										<label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+										<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" />
+										<label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
 									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<label for="exampleFormControlInput1" class="form-label">тип чегото там</label>
-								<div>
-									<div id="productionRequestType2" class="btn-group" role="group" aria-label="Basic example">
-										<button type="button" class="btn btn-primary requestType">Трубопровод</button>
-										<button type="button" class="btn btn-primary requestType">Резервуар</button>
-										<button type="button" class="btn btn-primary requestType">Металлоконструкция</button>
-									</div>
-									<div id="qualificationRequestType2" class="btn-group d-none" role="group" aria-label="Basic example">
-										<button type="button" class="btn btn-primary requestType">ДС</button>
-										<button type="button" class="btn btn-primary requestType">ТР</button>
-										<button type="button" class="btn btn-primary requestType">PQR</button>
-									</div>
-								</div>
-							</div>
-							<div class="col-3">
-								<label class="form-label" for="">Выбор даты</label>
-								<input class="form-control" type="text" name="" id="jointsDate" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6">
-								<div class="filterCheckBoxes d-flex align-items-center">
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+									<div class="filterEmployees__card card" style="width: 18rem">
+										<div class="card-header">Выбрать сотрудника</div>
+										<div class="filterEmployees__content">
+											<input type="search" name="" id="" class="filterEmployees__search" />
+											<ul class="list-group">
+												<li class="list-group-item">
+													<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" />
+													<label class="form-check-label" for="firstCheckbox">First checkbox</label>
+												</li>
+												<li class="list-group-item">
+													<input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
+													<label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+												</li>
+												<li class="list-group-item">
+													<input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+													<label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+												</li>
+											</ul>
 										</div>
 									</div>
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-										</div>
-									</div>
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-										</div>
-									</div>
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-										</div>
-									</div>
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-										</div>
-									</div>
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-										</div>
-									</div>
-									<div class="filterCheckBoxes__item">
-										<div>ПВК <span>(10)</span></div>
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="card" style="width: 18rem">
-									<div class="card-header">Featured</div>
-									<ul class="list-group">
-										<li class="list-group-item">
-											<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" />
-											<label class="form-check-label" for="firstCheckbox">First checkbox</label>
-										</li>
-										<li class="list-group-item">
-											<input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
-											<label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-										</li>
-										<li class="list-group-item">
-											<input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
-											<label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
-										</li>
-									</ul>
 								</div>
 							</div>
 						</div>
@@ -452,6 +468,7 @@
 									<th></th>
 									<th class="colWithFilter" data-num="1">№</th>
 									<th class="colWithFilter" data-num="2">Номер заявки</th>
+									<th>Подобъект</th>
 									<th class="colWithFilter" data-num="3">Номер стыка</th>
 									<th>Зона(тт)</th>
 									<th>Линия(тт)</th>
@@ -523,6 +540,16 @@
 							<tbody></tbody>
 						</table>
 					</div>
+
+					<div class="row mt-5 pb-5">
+						<div class="col-2">
+							<label class="form-label" for="">Установить дату / время начала работ</label>
+							<div class="input-group mb-3">
+								<input type="text" name="" id="startWorkDateTime" class="form-control" />
+								<button class="btn btn-outline-secondary" type="button" id="button-addon2">Установить</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -541,6 +568,6 @@
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="/libs/airDatePicker/index.js"></script>
 		<script src="/js/libs/tableColumnFilter.js" type="module"></script>
-		<script src="/js/jointsPage/index.js" type="module"></script>
+		<script src="/js/tasksPage/index.js" type="module"></script>
 	</body>
 </html>
