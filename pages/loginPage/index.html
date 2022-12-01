@@ -16,30 +16,31 @@
 			<div class="login_card card">
 				<div class="login-card-body card-body">
 					<h4 class="text-center">Вход</h4>
-					<form id="loginForm" method="post" action="#">
-						<div class="input-group mb-3">
-							<input type="text" name="userEmail" class="form-control" placeholder="Логин(почта)" required autofocus />
-							<span class="input-group-text domain_color">@velesstroy.com</span>
-						</div>
+					<div class="input-group mb-3">
+						<input type="text" id="login" name="userEmail" class="form-control" placeholder="Логин(почта)" required autofocus />
+						<span class="input-group-text domain_color">@velesstroy.com</span>
+					</div>
 
-						<div class="mb-3">
-							<input type="password" placeholder="Пароль" required name="userPassword" class="form-control login_card_password" />
-						</div>
+					<div class="mb-3">
+						<input type="password" id="password" placeholder="Пароль" required name="userPassword" class="form-control login_card_password" />
+					</div>
 
-						<div class="row">
-							<div class="col-8">
-								<div class="icheck-primary mt-1">
-									<input type="checkbox" id="rememberMe" name="rememberMe" checked />
-									<label for="rememberMe">Запомнить меня</label>
-								</div>
-							</div>
-							<div class="col-4">
-								<button id="loginButton" class="btn btn-primary btn-block" onclick="">Вход</button>
+					<div class="row">
+						<div class="col-8">
+							<div class="icheck-primary mt-1">
+								<input type="checkbox" id="rememberMe" name="rememberMe" checked />
+								<label for="rememberMe">Запомнить меня</label>
 							</div>
 						</div>
-					</form>
+						<div class="col-4">
+							<button id="loginButton" class="btn btn-primary btn-block">Вход</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+		<script src="/js/loginPage/index.js" type="module"></script>
 	</body>
 </html>
