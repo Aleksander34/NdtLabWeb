@@ -1,3 +1,4 @@
+import requestService from '../api/requestService.js';
 import initColumnFilter from '../libs/tableColumnFilter.js';
 $(function () {
 	var _$modal = $('#exampleModal'),
@@ -1558,6 +1559,9 @@ $(function () {
 				$('#requestPreviewInfo').addClass('d-none');
 				return;
 			}
+
+			requestService.getPreviewRequest($(this).get(0).files[0]);
+
 			$('#requestPreviewInfo').removeClass('d-none');
 		}
 	});
