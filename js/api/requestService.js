@@ -2,7 +2,7 @@ import APP_CONSTS from '../common/appConst.js';
 
 class RequestService {
 	constructor() {
-		this.url = APP_CONSTS.SERVER_URL + 'api/Request';
+		this.url = APP_CONSTS.SERVER_URL + 'api/Requests';
 	}
 
 	async getPreviewRequest(file) {
@@ -11,7 +11,7 @@ class RequestService {
 
 		const config = {
 			headers: {
-				'content-type': 'multipart/form-data; charset=utf-8;',
+				'Content-Type': 'multipart/form-data',
 			},
 		};
 
