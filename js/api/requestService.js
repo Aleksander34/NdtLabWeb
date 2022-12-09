@@ -20,7 +20,7 @@ class RequestService {
 			.post(this.url + '/GetPreviewRequest', formData, config)
 			.then(function (response) {
 				result = response.data;
-				console.log(response);
+				console.log(result);
 			})
 			.catch(function (error) {
 				console.log(error);

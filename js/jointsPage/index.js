@@ -19,6 +19,18 @@ $(function () {
 		].join(''),
 		info: false,
 		paging: false,
+
+		columns: [
+			{
+				data: 'number',
+			},
+			{
+				data: 'connectionType',
+			},
+			{
+				data: 'weldingType',
+			},
+		],
 	});
 
 	$('#repairCountTable').DataTable({
@@ -1551,7 +1563,7 @@ $(function () {
 		$('#productionRequest2').removeClass('active');
 	});
 
-	$('#requestFile').change(function () {
+	$('#requestFile').change(async function () {
 		if ($(this).get(0).files.length > 0) {
 			let fileName = $(this).get(0).files[0].name;
 			if (!fileName.match(/.*\.(xlsx|xls|xlsb)/)) {
@@ -1560,7 +1572,15 @@ $(function () {
 				return;
 			}
 
-			requestService.getPreviewRequest($(this).get(0).files[0]);
+			let previewRequest = await requestService.getPreviewRequest($(this).get(0).files[0]);
+			console.log(previewRequest);
+			$('#requestNumber').text(previewRequest.request.number);
+			$('#requestData').text(new Date(previewRequest.request.date).toLocaleDateString());
+
+			previewRequest.joints.forEach((element) => {
+				console.log(element);
+				$('#requestPreviewTable').DataTable().row.add(element).draw(false);
+			});
 
 			$('#requestPreviewInfo').removeClass('d-none');
 		}
