@@ -25,11 +25,50 @@ $(function () {
 				data: 'number',
 			},
 			{
-				data: 'connectionType',
+				data: 'weldingDate',
 			},
 			{
 				data: 'weldingType',
 			},
+			{
+				data: 'connectionType',
+			},
+			{
+				data: 'elementOne',
+			},
+			{
+				data: 'elementTwo',
+			},
+			{
+				data: 'diameterOne',
+			},
+			{
+				data: 'diameterTwo',
+			},
+			{
+				data: 'thicknessOne',
+			},
+			{
+				data: 'thicknessTwo',
+			},
+			{
+				data: 'gradeOne',
+			},
+			{
+				data: 'gradeTwo',
+			},
+			{
+				data: 'stamps',
+			},
+			{
+				data: 'requiredInspection',
+			},
+			{
+				data: 'weldLength',
+			},
+			{
+				data: 'note',
+			}
 		],
 	});
 
@@ -1576,6 +1615,32 @@ $(function () {
 			console.log(previewRequest);
 			$('#requestNumber').text(previewRequest.request.number);
 			$('#requestData').text(new Date(previewRequest.request.date).toLocaleDateString());
+			$('#requestWeldingCompany').text(previewRequest.request.weldingCompany);
+			$('#divisionName').text(previewRequest.division.name);
+			$('#requestObject').text(previewRequest.request.object);
+			$('#requestPartObject').text(previewRequest.request.partObject);
+			$('#requestCategoryGost').text(previewRequest.request.categoryGost);
+			$('#requestOtherCategory').text(previewRequest.request.otherCategory);
+			$('#requestDraw').text(previewRequest.request.draw);
+			$('#requestTemperature').text(previewRequest.request.temperature);
+
+			$('#requestReferencesDocMainDoc').text(previewRequest.request.referencesDoc.mainDoc);
+			$('#requestReferencesDocWeldingDoc').text(previewRequest.request.referencesDoc.weldingDoc);
+			$('#requestReferencesDocInspectionDoc').text(previewRequest.request.referencesDoc.inspectionDoc);
+			$('#requestReferencesDocQualityCriteria').text(previewRequest.request.referencesDoc.qualityCriteria);
+
+			$('#requestPipingZone').text(previewRequest.request.piping.zone);
+			$('#requestPipingLine').text(previewRequest.request.piping.line);
+			$('#requestPipingSpool').text(previewRequest.request.piping.spool);
+			$('#requestSteelStructureSector').text(previewRequest.request.steelStructure.sector);
+			$('#requestSteelStructurePart').text(previewRequest.request.steelStructure.part);
+			$('#tankPart').text(previewRequest.tankPart);
+			$('#requestPipeLineDistance').text(previewRequest.request.pipeLine.distance);
+			$('#requestRebar').text(previewRequest.request.rebar);
+			$('#QualificationType').text(previewRequest.qualificationType);
+
+			$('#requestSubmittedBy').text(previewRequest.request.submittedBy);
+			$('#requestReceivedByFio').text(previewRequest.request.receivedByFio);
 
 			previewRequest.joints.forEach((element) => {
 				console.log(element);
