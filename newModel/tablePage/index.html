@@ -4,330 +4,142 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+		<title>Joints Table</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+		<link rel="stylesheevit" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
-
+		<link rel="stylesheet" href="/newModel/tablePage/style.css" />
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="/css/style.css" />
-		<link rel="stylesheet" href="/libs/airDatePicker/index.css" />
-
-		<title>NdtLab - Таблица стыков</title>
 	</head>
-	<body class="sidebar-mini">
-		<div class="wrapper">
-			<!--вертикальное меню-->
-			<aside class="main-sidebar elevation-4">
-				<div class="container"></div>
-				<!-- Brand Logo -->
-				<a href="index3.html" class="brand-link">
-					<img src="/img/free-icon-office-7103932.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: 0.8" />
-					<span class="brand-text font-weight-light">NdtLab</span>
-				</a>
-				<!-- Вертикальное меню -->
-				<div class="sidebar">
-					<!-- Sidebar Menu -->
-					<nav class="mt-4">
-						<!-- Пункты меню -->
-						<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Отчетность
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<!-- Подменю Отчетности -->
-								<ul class="nav nav-treeview" id="someIdNameOrSo">
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Графики</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Таблицы</p>
-										</a>
-									</li>
-								</ul>
-							</li>
-
-							<!-- Таблица стыков -->
-							<li class="nav-item">
-								<a href="#" class="nav-link active">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>Таблица стыков</p>
-								</a>
-							</li>
-							<!--  -->
-
-							<!-- Задания -->
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Задания
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<!-- подменю -->
-								<ul class="nav nav-treeview" id="someIdNameOnother">
-									<li class="nav-item">
-										<a href="/pages/tasksPage/tasksPage.html" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Меню заданий</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Получить задание</p>
-										</a>
-									</li>
-								</ul>
-							</li>
-
-							<!-- Персонал -->
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Персонал
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<!-- подменю -->
-								<ul class="nav nav-treeview" id="someIdNameOnother">
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>1 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>2 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>3 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>4 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>5 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>6 вкладка</p>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<!--  -->
-
-							<!-- Оборудование и инвентарь -->
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Оборудование и инвентарь
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<!-- подменю -->
-								<ul class="nav nav-treeview" id="someIdNameOnother">
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>1 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>2 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>3 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>4 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>5 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>6 вкладка</p>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<!--  -->
-
-							<!-- Архив -->
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>
-										Архив
-										<i class="right fas fa-angle-left"></i>
-									</p>
-								</a>
-								<!-- подменю -->
-								<ul class="nav nav-treeview" id="someIdNameOnother">
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>1 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>2 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>3 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>4 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>5 вкладка</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>6 вкладка</p>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<!--  -->
-
-							<!-- пункт меню без всплывающего меню -->
-							<li class="nav-item">
-								<a href="#" class="nav-link">
-									<i class="nav-icon fas fa-th"></i>
-									<p>
-										Simple Link
-										<span class="right badge badge-danger">New</span>
-									</p>
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<!-- /.sidebar-menu -->
-				</div>
-				<!-- /Вертикальное меню -->
-			</aside>
-
-			<!-- горизонтальное верхнее меню -->
-			<nav class="main-header navbar navbar-expand-lg navbar-white navbar-light">
-				<!-- первый контейнер горизонтального меню -->
-				<ul class="navbar-nav align-items-center">
-					<!-- пусть открытой страницы -->
-					<li class="nav-item">
-						<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-					</li>
-					<li class="nav-item">
-						<!-- Путь -->
-						<ol class="breadcrumb m-0">
-							<li class="breadcrumb-item active" aria-current="page">Таблица стыков</li>
-						</ol>
-					</li>
-					<!--полный экран -->
-					<li class="nav-item">
-						<a class="nav-link" data-widget="fullscreen" href="#" role="button">
-							<i class="fas fa-expand-arrows-alt"></i>
+	<body>
+		<!-- Меню вертикальное всплывающее -->
+		<div class="sidebar close">
+			<!-- логотип -->
+			<div class="logo-details">
+				<i class="fa-solid fa-flask"></i>
+				<span class="logo_name">NDTLab</span>
+			</div>
+			<ul class="nav-links">
+				<!-- отчетность вкладка -->
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<i class="fa-solid fa-chart-line"></i>
+							<span class="link_name">Отчетность</span>
 						</a>
-					</li>
-				</ul>
-				<!-- второй контейнер горизонтального меню -->
-				<ul class="navbar-nav ml-auto">
-					<!--Уведомления -->
-					<li c1lass="nav-item dropdown notification">
-						<a class="nav-link" data-bs-toggle="dropdown" href="#" aria-expanded="false">
-							<i class="far fa-bell"></i>
-							<span class="badge badge-warning navbar-badge">15</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px">
-							<span class="dropdown-item dropdown-header">15 Notifications</span>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<i class="fas fa-envelope mr-2"></i> 4 new messages
-								<span class="float-right text-muted text-sm">3 mins</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<i class="fas fa-users mr-2"></i> 8 friend requests
-								<span class="float-right text-muted text-sm">12 hours</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item">
-								<i class="fas fa-file mr-2"></i> 3 new reports
-								<span class="float-right text-muted text-sm">2 days</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-						</div>
-					</li>
-					<!-- информация о пользователе -->
-					<li class="nav-item">
-						<div class="ml-auto account_info mr-3">
-							<div class="account_role">Иванов И.И Роль</div>
-						</div>
-					</li>
-					<!-- кнопка выход -->
-					<li class="nav-item"><a href="../loginPage/index.html" class="btn btn-primary mr-3">Выход</a></li>
-				</ul>
-			</nav>
+						<i class="fa-solid fa-caret-down arrow"></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Отчетность</a></li>
+						<li><a href="#">Графики</a></li>
+						<li><a href="#">Таблицы</a></li>
+					</ul>
+				</li>
 
+				<!-- таблица стыков вкладка -->
+				<li>
+					<a href="#">
+						<i class="fa-solid fa-table"></i>
+						<span class="link_name">Таблица стыков</span>
+					</a>
+					<ul class="sub-menu blank">
+						<li><a class="link_name" href="#">Таблица стыков</a></li>
+					</ul>
+				</li>
+
+				<!-- меню заданий вкладка -->
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<i class="fa-solid fa-list-check"></i>
+							<span class="link_name">Задания</span>
+						</a>
+						<i class="fa-solid fa-caret-down arrow"></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Задания</a></li>
+						<li><a href="#">Меню заданий</a></li>
+						<li><a href="#">Получить задание</a></li>
+					</ul>
+				</li>
+
+				<!-- меню персонал вкладка -->
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<i class="fa-solid fa-user-group"></i>
+							<span class="link_name">Персонал</span>
+						</a>
+						<i class="fa-solid fa-caret-down arrow"></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Персонал</a></li>
+						<li><a href="#">Персонал 1</a></li>
+						<li><a href="#">Персонал 2</a></li>
+					</ul>
+				</li>
+
+				<!-- меню оборудования вкладка -->
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<i class="fa-solid fa-screwdriver-wrench"></i>
+							<span class="link_name">Оборудование</span>
+						</a>
+						<i class="fa-solid fa-caret-down arrow"></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Оборудование</a></li>
+						<li><a href="#">Оборудование 1</a></li>
+						<li><a href="#">Оборудование 2</a></li>
+					</ul>
+				</li>
+
+				<!-- меню архив вкладка -->
+				<li>
+					<div class="iocn-link">
+						<a href="#">
+							<i class="fa-solid fa-box-archive"></i>
+							<span class="link_name">Архив</span>
+						</a>
+						<i class="fa-solid fa-caret-down arrow"></i>
+					</div>
+					<ul class="sub-menu">
+						<li><a class="link_name" href="#">Архив</a></li>
+						<li><a href="#">Архив 1</a></li>
+						<li><a href="#">Архив 2</a></li>
+					</ul>
+				</li>
+
+				<!-- Информация о пользователе/фото/выход -->
+				<li>
+					<div class="profile-details">
+						<div class="profile-content">
+							<!-- <img src="/userPhoto" alt="" /> -->
+						</div>
+						<div class="name-job">
+							<div class="profile_name">Фамилия И.О.</div>
+							<div class="job">Должность</div>
+						</div>
+						<i class="fa-solid fa-right-from-bracket"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Горизонтальная полоса и содержимое страницы -->
+		<section class="home-section">
+			<!-- горизонтальная полоса с иконкой меню -->
+			<div class="horizontal-line">
+				<i class="fa-solid fa-bars bx-menu"></i>
+				<span class="text">Меню</span>
+			</div>
 			<!--содержимое страницы -->
 			<div class="content-wrapper">
 				<div class="container-fluid px-3">
@@ -364,64 +176,6 @@
 										<button type="button" class="btn-xsm btn btn-primary requestType">PQR</button>
 									</div>
 								</div>
-							</div>
-							<div class="col-5">
-								<!-- Фильтр Статус контроля -->
-								<!-- <div class="filterStatusResult">
-                  <div class="row text-center">
-                    <div class="col">Методы</div>
-                    <div class="col">Годен</div>
-                    <div class="col">Ремонт/Вырез</div>
-                    <div class="col">Н/Р</div>
-                    <div class="col">Нет контроля</div>
-                  </div>
-                  <div class="filterStatusResult__items">
-                    <div class="row text-center">
-                      <div class="col">ВИК</div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                    </div>
-                    <div class="row text-center">
-                      <div class="col">МК/ПВК</div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                    </div>
-                    <div class="row text-center">
-                      <div class="col">РК</div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                    </div>
-                    <div class="row text-center">
-                      <div class="col">PAUT</div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                    </div>
-                    <div class="row text-center">
-                      <div class="col">УЗК</div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                    </div>
-                    <div class="row text-center">
-                      <div class="col">ПВТ</div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                      <div class="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked /></div>
-                    </div>
-                  </div>
-                  <button class="filterStatusResult__reset btn btn-secondary">Снять выделение</button>
-                  <button class="filterStatusResult__checkAll btn btn-primary">Применить фильтр</button>
-                </div> -->
 							</div>
 						</div>
 						<div class="row">
@@ -592,12 +346,11 @@
 					<!-- костомный фильтр строк таблицы через коонки -->
 				</div>
 			</div>
-
 			<!-- подвал страницы -->
 			<footer class="main-footer">
 				<strong> Copyright &copy 2022 NdtLab; </strong>
 			</footer>
-		</div>
+		</section>
 
 		<!-- модальное окно -->
 		<div class="modal fade joinModal" id="exampleModal" tabindex="-1">
@@ -1049,17 +802,22 @@
 			</div>
 		</div>
 
-		<!-- скрипты -->
-		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-		<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-		<script src="/js/libs/toastr.js"></script>
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-		<script src="/libs/airDatePicker/index.js"></script>
-		<script src="/js/libs/tableColumnFilter.js" type="module"></script>
-		<script src="/js/jointsPage/index.js" type="module"></script>
+		<!-- Скрипт меню -->
+		<script>
+			let arrow = document.querySelectorAll('.arrow');
+			for (var i = 0; i < arrow.length; i++) {
+				arrow[i].addEventListener('click', (e) => {
+					let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+					arrowParent.classList.toggle('showMenu');
+				});
+			}
+			let sidebar = document.querySelector('.sidebar');
+			let sidebarBtn = document.querySelector('.bx-menu');
+			console.log(sidebarBtn);
+			sidebarBtn.addEventListener('click', () => {
+				sidebar.classList.toggle('close');
+			});
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
